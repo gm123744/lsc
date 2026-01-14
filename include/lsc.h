@@ -39,6 +39,7 @@
 ////
 #ifndef LSC_H
 #define LSC_H
+#include <stddef.h>
 //keyboard input
 #define KEY_A 0x1E
 #define KEY_B 0x30
@@ -154,4 +155,5 @@ typedef struct lsc_write {
     }
 #endif
 #endif // LSC_H
+
 
