@@ -1,12 +1,23 @@
 #!/bin/bash
 
+# ===== CONFIG =====
 TARGET_DIR="#include"      # Folder to move files into
-FILENAME_PATTERN="$1"      # Pattern to match files (passed as first argument)
+FILENAME_PATTERN="$1"      # Pass the filename or pattern as first argument
+# ==================
 
 if [ -z "$FILENAME_PATTERN" ]; then
   echo "Usage: $0 <filename_pattern>"
   exit 1
 fi
+
+echo "WARNING: This script will move all files matching '$FILENAME_PATTERN' into '$TARGET_DIR'."
+echo "Before any changes are made, please confirm."
+read -p "Do you want to continue? (y/n): " confirm
+case "$confirm" in
+  y|Y ) echo "Proceeding...";;
+  n|N ) echo "Operation cancelled."; exit 0;;
+  * ) echo "Invalid input. Operation cancelled."; exit 1;;
+esac
 
 mkdir -p "$TARGET_DIR"
 
@@ -17,6 +28,7 @@ if [ $total -eq 0 ]; then
   exit 0
 fi
 
+# Initialize progress
 progress=0
 
 show_progress() {
@@ -38,5 +50,6 @@ for file in "${files[@]}"; do
   fi
 done
 
+# Ensure progress ends at 100%
 show_progress 100
 echo -e "\nDone! Moved $total files to '$TARGET_DIR'."
