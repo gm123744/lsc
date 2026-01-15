@@ -1,3 +1,11 @@
 # LINUX-SYSCALL-COLLECTION
-LINUX SYSCALL COLLECTION (lsc in short) is a C/C++ library that gives total control over the linux kernel with a assembly backend giving total control over the system,in a singular header file.
-ABI NOT STABLE
+LINUX SYSCALL COLLECTION (lsc in short) is experimental C/C++ library with a assembly backend bypassing glibc entirely.
+
+##status:
+
+- Library still under development
+- **Unstable ABI**
+- Currently implemented: minimal I/O (write)
+## supported platforms:
+
+- Linux x86_64
