@@ -1,7 +1,7 @@
 # LINUX-SYSCALL-COLLECTION
 LINUX SYSCALL COLLECTION (lsc in short) is experimental C/C++ library with a assembly backend bypassing glibc entirely.
 
-# #status:
+## status:
 
 - Library still under development
 - **Unstable ABI**
