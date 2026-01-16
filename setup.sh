@@ -1,3 +1,5 @@
+#file under development do not execute if this comment still exists on the top of the file
+
 #!/bin/bash
 
 # ===== CONFIG =====
