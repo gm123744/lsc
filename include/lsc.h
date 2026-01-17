@@ -19,6 +19,7 @@
 // VERSION HISTORY
 //   (0.01) 14/1/2026 First public release
 //   (0.02) 16/1/2026 Printing added (stable) i/o added (unstable)
+//   (0.03) 20/1/2026 Complete rework of lsc.h, i/o (stable) COMMING SOON
 //   Full history can be found at the end of this file.
 //
 // LICENSE
@@ -191,4 +192,5 @@ static inline void lsctwriteexecute(lsc_write* w) {
 #endif // LSC_H
 //   (0.01) 14/1/2026 First public release
 //   (0.02) 16/1/2026 Printing added (stable) i/o added (unstable)
+
 
